@@ -29,7 +29,7 @@ export default function Interests(props) {
   }
 
   return (
-    <>
+    <div style={{fontSize:"1.2em"}}>
       <div>
         <a className="exit" href="home">X</a>
       </div>
@@ -134,6 +134,6 @@ export default function Interests(props) {
           <i className="fas fa-arrow-right"></i>
         </Link>
       </div>
-    </>
+    </div>
   )
 }

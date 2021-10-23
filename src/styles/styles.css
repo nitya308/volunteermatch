@@ -49,8 +49,16 @@ h2 {
 }
 
 /* Site Menu styles */
-.navbar-light {
+.navbar {
   background-color: #9CE7E1;
+  font-size: 1.2em;
+  padding: 10px 20px;
+}
+
+.nav-link{
+  color: #000000 !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 
 .navbar-brand {
@@ -141,19 +149,6 @@ img {
   border-radius: 25px;
 }
 
-.quizbox:hover {
-  box-shadow: 0px 0px;
-  transform: translateY(4px);
-  transform: translateX(4px)
-}
-
-.quizbox.is-active {
-  box-shadow: 0px 0px;
-  border-width: 3px;
-  transform: translateY(4px);
-  transform: translateX(4px);
-}
-
 .quiz1 {
   background-color: #FFFFFF;
   border: 2px solid #6D3AA1;
@@ -170,6 +165,19 @@ img {
   background-color: #DEF7F5;
   border: 2px solid #6D3AA1;
   box-shadow: 5px 5px #6D3AA1;
+}
+
+.quizbox:hover {
+  box-shadow: 3px 3px;
+  transform: translateY(4px);
+  transform: translateX(4px)
+}
+
+.quizbox.is-active {
+  box-shadow: 0px 0px;
+  border-width: 3px;
+  transform: translateY(4px);
+  transform: translateX(4px);
 }
 
 /* Quiz exit styles */
