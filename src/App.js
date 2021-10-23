@@ -45,6 +45,9 @@ function App() {
     <Router>
       <MyNav />
       <Switch>
+      <Route exact path="">
+          <Home />
+        </Route>
         <Route exact path="/home">
           <Home />
         </Route>
