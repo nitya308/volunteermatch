@@ -2,6 +2,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect
 } from "react-router-dom";
 import MyNav from './components/nav';
 import Home from "./components/homepage";
@@ -14,54 +15,54 @@ import Results from "./components/results";
 
 function App() {
 
-  const [filters, setFilters] = useState({'interests': [], 'skills': [], 'time': ""})
+  const [filters, setFilters] = useState({ 'interests': [], 'skills': [], 'time': "" })
 
   const addInterest = (interest) => {
     filters['interests'].push(interest)
-    setFilters({...filters})
+    setFilters({ ...filters })
   }
 
   const removeInterest = (interest) => {
     filters['interests'] = filters['interests'].filter((it) => it !== interest)
-    setFilters({...filters})
+    setFilters({ ...filters })
   }
 
   const addSkill = (skill) => {
     filters['skills'].push(skill)
-    setFilters({...filters})
+    setFilters({ ...filters })
   }
 
   const removeSkill = (skill) => {
     filters['skills'] = filters['skills'].filter((it) => it !== skill)
-    setFilters({...filters})
+    setFilters({ ...filters })
   }
   const setTime = (time) => {
     filters['time'] = time
-    setFilters({...filters})
+    setFilters({ ...filters })
   }
 
-  
+
   return (
     <Router>
       <MyNav />
       <Switch>
-      <Route exact path="">
-          <Home />
+        <Route exact path="/">
+          <Redirect to="/home" />
         </Route>
         <Route exact path="/home">
           <Home />
         </Route>
         <Route exact path="/quiz-interests">
-          <Interests add={addInterest} remove={removeInterest}/>
+          <Interests add={addInterest} remove={removeInterest} />
         </Route>
         <Route exact path="/quiz-skills">
-          <Skills add={addSkill} remove={removeSkill}/>
+          <Skills add={addSkill} remove={removeSkill} />
         </Route>
         <Route exact path="/quiz-time">
-          <Time setTime={setTime} time={filters['time']}/>
+          <Time setTime={setTime} time={filters['time']} />
         </Route>
         <Route exact path="/results">
-          <Results filters={filters}/>
+          <Results filters={filters} />
         </Route>
       </Switch>
     </Router>
