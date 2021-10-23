@@ -1,27 +1,23 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { Nav } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 
 export default function MyNav(props) {
     return (
-        <nav className="navbar navbar-expand-md navbar-light" style={{fontSize:"1.2em"}}>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-            </button>
-
-            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-                <a className="nav-item nav-link active" href="home">HOME</a>
-                <a className="nav-item nav-link" href="about">ABOUT</a>
-            </div>
-            </div>
-            <a className="navbar-brand mx-auto" href="home">Student Work Match</a>
-            <div className="collapse navbar-collapse" id="navbarNavAltMarkup" style={{alignItems: "right"}}>
-            <div className="navbar-nav" style={{marginLeft:"auto"}}>
-                <a className="nav-item nav-link button" id="header-button" href="quiz-interests">Take the quiz</a>
-            </div>
-            </div>
-        </nav>
-
-        
+            <Navbar className="navbar" bg="light" expand="lg">
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="me-auto">
+                            <Nav.Link href="home">Home</Nav.Link>
+                            <Nav.Link href="about">About</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                    <Navbar.Brand href="home" className="m-auto">Student VolunteerMatch</Navbar.Brand>
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="ms-auto">
+                            <Nav.Link className="button" href="quiz-interests">Take the quiz</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+            </Navbar>
     )
 }
