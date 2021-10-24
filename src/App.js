@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import MyNav from './components/nav';
 import Home from "./components/homepage";
+import About from "./components/about";
 import Interests from "./components/quiz-interests";
 import Skills from "./components/quiz-skills";
 import Time from "./components/quiz-time";
@@ -63,6 +64,9 @@ function App() {
         </Route>
         <Route exact path="/results">
           <Results filters={filters} />
+        </Route>
+        <Route exact path="/about">
+          <About />
         </Route>
       </Switch>
     </Router>

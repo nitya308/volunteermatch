@@ -7,7 +7,7 @@ export default function Home(props){
         <div style={{fontSize:"1.2em"}}>
             <div className="section" id="section1">
                 <h2>
-                Find the perfect volunteer or work opportunity for you!
+                Find the perfect volunteer or community service project for you!
                 </h2>
                 <p>
                 Helping students find their perfect match with personalised recommendations based on your interests, skills and schedules!
