@@ -12,7 +12,7 @@ export default function MyNav(props) {
                     <Nav.Link href="about">ABOUT</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
-            <Navbar.Brand href="home" className="m-auto">Student VolunteerMatch</Navbar.Brand>
+            <Navbar.Brand href="home" className="m-auto" style={{fontSize:"1.3em"}}>Student VolunteerMatch</Navbar.Brand>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
                     <Nav.Link className="button" href="quiz-interests">Take the quiz</Nav.Link>
