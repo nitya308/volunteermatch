@@ -28,6 +28,8 @@ export default function Interests(props) {
     setIsActive({ ...isActive })
   }
 
+  document.body.style.backgroundColor = "#DEF7F5";
+
   return (
     <div style={{fontSize:"1.2em"}}>
       <div>

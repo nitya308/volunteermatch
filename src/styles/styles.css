@@ -230,6 +230,7 @@ img {
 .descp, .skills, .req, .contact{
   margin-top: 10px;
   margin-bottom: 10px;
+  text-decoration: none;
 }
 
 /* End of CSS Styles */

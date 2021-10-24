@@ -1,6 +1,9 @@
 import img from '../images/profile.png'
 
 export default function About(props) {
+
+    document.body.style.backgroundColor = "#FFFFFF";
+
     return (
         <div style={{ fontSize: "1.2em" }}>
             <div className="section">

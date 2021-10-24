@@ -13,6 +13,8 @@ export default function Time(props) {
     return props.time === val ? "is-active" : ""
   }
 
+  document.body.style.backgroundColor = "#FFFFFF";
+
   return (
     <div style={{ fontSize: "1.2em" }}>
       <div>

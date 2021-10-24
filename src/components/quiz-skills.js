@@ -27,6 +27,8 @@ export default function Skills(props) {
     setIsActive({ ...isActive })
   }
 
+  document.body.style.backgroundColor = "#F2EEFE";
+
   return (
     <div style={{ fontSize: "1.2em" }}>
       <div>

@@ -3,6 +3,9 @@ import img2 from '../images/img2.png'
 import img3 from '../images/img3.png'
 
 export default function Home(props){
+
+    document.body.style.backgroundColor = "#FFFFFF";
+
     return (
         <div style={{fontSize:"1.2em"}}>
             <div className="section" id="section1">
