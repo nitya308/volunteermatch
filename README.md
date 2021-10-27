@@ -164,25 +164,25 @@ Quiz boxes are styled specifically to provide hover and selection design. The fo
  ## Results
  The final results page filters all projects contained in project.js based on quiz entires and displays relevant ones to the user.  
  ```  const results = filterInterests(props.filters)```  
-Each result in results is then mapped to present the information in a compact manner:
+Each project in results is then mapped to present the information in a compact manner:
  ``` 
 {results.map((i) => {
-                return (
-                    <div className="resultbox" key={i.name}>
-                        <h3 className="name" style={{ fontWeight: "500" }}>{i.name}</h3>
-                        <div className="descp">
-                            {i.descp}
-                        </div>
-                        <div className="skills">
-                            {"Skills needed: " + i.skill}
-                        </div>
-                        <div className="req">
-                            {i.requirements === 1 ? "Time requirements: flexible" : "Time requirements: " + i.requirements + "+ hours per week"}
-                        </div>
-                        <a href={i.contactLink} target="_blank" rel="noreferrer" className="contact">
-                            {"Contact:" + i.contact}
-                        </a>
-                    </div>
-                )
-            })}
-             ``` 
+  return (
+    <div className="resultbox" key={i.name}>
+    <h3 className="name" style={{ fontWeight: "500" }}>{i.name}</h3>
+    <div className="descp">
+        {i.descp}
+    </div>
+    <div className="skills">
+        {"Skills needed: " + i.skill}
+    </div>
+    <div className="req">
+        {i.requirements === 1 ? "Time requirements: flexible" : "Time requirements: " + i.requirements + "+ hours per week"}
+    </div>
+    <a href={i.contactLink} target="_blank" rel="noreferrer" className="contact">
+        {"Contact:" + i.contact}
+    </a>
+    </div>
+   )
+ })}
+  ``` 
