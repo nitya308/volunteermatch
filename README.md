@@ -86,12 +86,12 @@ Navbar is called in all routes, where are other components are called selectivel
 }
 ```
 ## The Quiz
-The quiz proceeds in three sections:  
+The quiz proceeds in **three sections: ** 
 ```quiz-interests.js``` ➡ ```quiz-skills.js``` ➡ ```quiz-time.js```  
   
-App.js defines fucntions to add and remove each category on each page to filters. These filters are stored in an array and finally used to filter the projects contained in projects.js to display results. 
+```App.js``` defines **fucntions to add and remove** each category on each page to/from filters. These filters are stored in an array and finally used to filter the projects contained in projects.js to display results. 
 
-For example the followung functions are defined for the interests page:
+For example, the following functions are defined for the ```quiz-interests``` page:
 
 ```
   const [filters, setFilters] = useState({ 'interests': [], 'skills': [], 'time': "" })
@@ -108,9 +108,9 @@ For example the followung functions are defined for the interests page:
   ```  
  
 These fucntions are called in quiz-interests.js when the corresponding button is clicked. onClick() toggles the interest's use state between active or inactive and calls addInterest/ removeInterest respectively. 
- 
+```  
  export default function Interests(props) {
-  ```  
+ 
   const [isActive, setIsActive] = useState({
     "Art": "",
     "Education": "",
@@ -133,6 +133,34 @@ These fucntions are called in quiz-interests.js when the corresponding button is
     }
     setIsActive({ ...isActive })
   }
-    ```  
+  ```  
+The same template is used for the   ```  quiz-skills  ```   page 
+Note:   ```  quiz-time  ```   has only an add fucntion since only one preffered time commitment box can be selected at a time. If another one is selected, the previous box is deselected and the new time added to the filter. 
 
-### Quiz styles
+### Quiz styles  
+
+Quiz boxes are styled specifically to provide hover and selection design. The following styles are applied in   ```  styles.css  ```    
+  ```  
+.quizbox{
+  background-color: #DEF7F5;
+  border: 2px solid #6D3AA1; 
+  box-shadow: 5px 5px #6D3AA1;
+}
+
+.quizbox:hover {
+  box-shadow: 3px 3px; // reduces drop shadow
+  transform: translateY(4px);
+  transform: translateX(4px)
+}
+
+.quizbox.is-active {
+  box-shadow: 0px 0px; // removes drop-shadow
+  border-width: 3px; // makes border thicker 
+  transform: translateY(4px);
+  transform: translateX(4px);
+}
+  ```  
+  
+ ## Results
+ The final results page filters all projects contained in project.js based on quiz entires and displays relevant ones to the user.  
+ ```  const results = filterInterests(props.filters)```  
