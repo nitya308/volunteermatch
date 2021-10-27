@@ -3,8 +3,6 @@
 **Created:** 2020  
 **Description:** Matches students with community service projects based on their skills, interests, and time requirements
 
-## Introduction
-
 ## Basic Details:
 **Platform:** ReactJS  
 **Languages:** JavaScript  
