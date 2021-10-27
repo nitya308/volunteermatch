@@ -51,8 +51,7 @@ Below is the basic structure of the web app. The components directory holds all 
 ## React Router
 This application uses the BrowseRouter.
  ```
- import 
-  BrowserRouter as Router from "react-router-dom";
+ import BrowserRouter as Router from "react-router-dom";
  ```
 Navbar is called in all routes, where are other components are called selectively.  ```/home ``` and  ```/about ``` simply load components while quiz pages call additional functions to store the user's answers. This is described in the next section.
   ```
@@ -86,3 +85,6 @@ Navbar is called in all routes, where are other components are called selectivel
   );
 }
 ```
+## The Quiz
+The quiz proceeds in three sections
+```quiz-interests.js``` ➡ ```quiz-skills.js``` ➡ ```quiz-time.js```
