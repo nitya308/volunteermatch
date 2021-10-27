@@ -161,6 +161,8 @@ Quiz boxes are styled specifically to provide hover and selection design. The fo
 }
   ```  
   
+  ![Image of Quiz](https://github.com/nitya308/volunteermatch/blob/master/src/images/quiz-styles.png)
+  
  ## Results
  The final results page filters all projects contained in project.js based on quiz entires and displays relevant ones to the user.  
  ```  const results = filterInterests(props.filters)```  
