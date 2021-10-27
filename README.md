@@ -29,7 +29,7 @@ OR
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Structure:
-Below is the basic structure of the website:
+Below is the basic structure of the web app. The components directory holds all presentational componenets and quiz functions. Componenets are displayed using calls in App.js.
 ```
  --src
     | -- components
@@ -48,4 +48,41 @@ Below is the basic structure of the website:
     |-- App.js
     |-- index.js
  ```
-
+## React Router
+This application uses the BrowseRouter.
+ ```
+ import 
+  BrowserRouter as Router from "react-router-dom";
+ ```
+Navbar is called in all routes, where are other components are called selectively.  ```/home ``` and  ```/about ``` simply load components while quiz pages call additional functions to store the user's answers. This is described in the next section.
+  ```
+  return (
+    <Router>
+      <MyNav />
+      <Switch>
+        <Route exact path="/">
+          <Redirect to="/home" />
+        </Route>
+        <Route exact path="/home">
+          <Home />
+        </Route>
+        <Route exact path="/quiz-interests">
+          <Interests add={addInterest} remove={removeInterest} />
+        </Route>
+        <Route exact path="/quiz-skills">
+          <Skills add={addSkill} remove={removeSkill} />
+        </Route>
+        <Route exact path="/quiz-time">
+          <Time setTime={setTime} time={filters['time']} />
+        </Route>
+        <Route exact path="/results">
+          <Results filters={filters} />
+        </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
+      </Switch>
+    </Router>
+  );
+}
+```
