@@ -1,8 +1,14 @@
 # Student VolunteerMatch
 **Author:** Nitya Agarwala   |  **Designed by:** Nitya Agarwala  
-**Created:** 2020
+**Created:** 2020  
+**Description:** Matches students with community service projects based on their skills, interests, and time requirements
 
 ## Introduction
+
+## Basic Details:
+**Platform:** ReactJS  
+**Languages:** JavaScript  
+**Frameworks:** React-Bootstrap
 
 ## Running the App
 
@@ -24,4 +30,24 @@ OR
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+## Structure:
+Below is the basic structure of the website:
+```
+ --src
+    | -- components
+    |   |-- nav.js (for Navbar)
+    |   |-- homepage.js (exports Home)
+    |   |-- about.js (exports About)
+    |   |-- quiz-interests.js (exports Interests page for quiz)
+    |   |-- quiz-skills.js (exports Skills page for quiz)
+    |   |-- quiz-time.js (exports Time page for quiz)
+    |   |-- results.js (exports Results page for quiz)
+    |   |-- project.js (stores available community service projects)
+    |
+    |-- styles
+    |   |-- styles.css
+    |
+    |-- App.js
+    |-- index.js
+ ```
 
