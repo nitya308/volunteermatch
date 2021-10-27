@@ -6,13 +6,13 @@
 
 Running this project locally requires NodeJS and yarn/npm. To install the required packages, run the following command
 
-```yarn install```  
+```yarn install```
 
-OR  
+OR
 
 ```npm install```
 
-**To run the app:**  
+**To start the app:**  
 
 ```yarn start```
 
