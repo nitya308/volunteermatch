@@ -1,5 +1,6 @@
 # Student VolunteerMatch
-**Author:** Nitya Agarwala  | **Designed by:** Nitya Agarwala | **Created:** 2020
+**Author:** Nitya Agarwala  | **Designed by:** Nitya Agarwala 
+**Created:** 2020
 
 ## Introduction
 
