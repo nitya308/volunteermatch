@@ -4,7 +4,7 @@
 
 ## Running the App
 
-Running this project locally requires NodeJS and yarn/npm. To install the required packages, run the following command
+**Running this project locally** requires NodeJS and yarn/npm. To install the required packages, run the following command
 
 ```yarn install```
 
