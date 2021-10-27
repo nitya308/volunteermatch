@@ -86,5 +86,53 @@ Navbar is called in all routes, where are other components are called selectivel
 }
 ```
 ## The Quiz
-The quiz proceeds in three sections
-```quiz-interests.js``` ➡ ```quiz-skills.js``` ➡ ```quiz-time.js```
+The quiz proceeds in three sections:  
+```quiz-interests.js``` ➡ ```quiz-skills.js``` ➡ ```quiz-time.js```  
+  
+App.js defines fucntions to add and remove each category on each page to filters. These filters are stored in an array and finally used to filter the projects contained in projects.js to display results. 
+
+For example the followung functions are defined for the interests page:
+
+```
+  const [filters, setFilters] = useState({ 'interests': [], 'skills': [], 'time': "" })
+
+  const addInterest = (interest) => {
+    filters['interests'].push(interest)
+    setFilters({ ...filters })
+  }
+
+  const removeInterest = (interest) => {
+    filters['interests'] = filters['interests'].filter((it) => it !== interest)
+    setFilters({ ...filters })
+  }
+  ```  
+ 
+These fucntions are called in quiz-interests.js when the corresponding button is clicked. onClick() toggles the interest's use state between active or inactive and calls addInterest/ removeInterest respectively. 
+ 
+ export default function Interests(props) {
+  ```  
+  const [isActive, setIsActive] = useState({
+    "Art": "",
+    "Education": "",
+    "Creative_Writing": "",
+    "Covid_Relief": "",
+    "News": "",
+    "Health": "",
+    "Music": "",
+    "Environment": "",
+  })
+
+  const handleWidgetClick = (val) => {
+    
+    const valActive = isActive[val] === "" ? "is-active" : ""
+    isActive[val] = valActive
+    if (valActive === "") {
+      props.remove(val)
+    } else {
+      props.add(val)
+    }
+    setIsActive({ ...isActive })
+  }
+    ```  
+
+### Quiz styles
