@@ -89,7 +89,7 @@ Navbar is called in all routes, where are other components are called selectivel
 The quiz proceeds in **three sections:** 
 ```quiz-interests.js``` ➡ ```quiz-skills.js``` ➡ ```quiz-time.js```  
   
-```App.js``` defines **fucntions to add and remove** each category on each page to/from filters. These filters are stored in an array and finally used to filter the projects contained in projects.js to display results. 
+```App.js``` defines **fucntions to add and remove** each category on each page to/from filters. These filters are stored in an array and finally used to filter the projects contained in ```projects.js``` to display results. 
 
 For example, the following functions are defined for the ```quiz-interests``` page:
 
