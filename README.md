@@ -166,6 +166,7 @@ Quiz boxes are styled specifically to provide hover and selection design. The fo
  ## Results
  The final results page filters all projects contained in project.js based on quiz entires and displays relevant ones to the user.  
  ```  const results = filterInterests(props.filters)```  
+   
 Each project in results is then mapped to present the information in a compact manner:
  ``` 
 {results.map((i) => {
