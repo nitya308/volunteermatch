@@ -2,6 +2,7 @@
 **Author:** Nitya Agarwala   |  **Designed by:** Nitya Agarwala  
 **Created:** 2020  
 **Description:** Matches students with community service projects based on their skills, interests, and time requirements
+View Site here: https://nitya308.github.io/
 
 ## Basic Details:
 **Platform:** ReactJS  
